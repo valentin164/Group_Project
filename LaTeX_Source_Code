@@ -1,1 +1,382 @@
-asd
+\documentclass[letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
+% Outline numbering
+\setcounter{secnumdepth}{0}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+% List styles
+\newcommand\liststyleRTFNumii{%
+\renewcommand\labelitemi{{\textbullet}}
+\renewcommand\labelitemii{o}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{{\textbullet}}
+}
+\newcommand\liststyleRTFNumiv{%
+\renewcommand\labelitemi{{}-}
+\renewcommand\labelitemii{o}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{{\textbullet}}
+}
+\newcommand\liststyleRTFNumv{%
+\renewcommand\labelitemi{{\textbullet}}
+\renewcommand\labelitemii{o}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{{\textbullet}}
+}
+\newcommand\liststyleRTFNumvi{%
+\renewcommand\labelitemi{{\textbullet}}
+\renewcommand\labelitemii{o}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{{\textbullet}}
+}
+\newcommand\liststyleRTFNumiii{%
+\renewcommand\labelitemi{{\textbullet}}
+\renewcommand\labelitemii{o}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{{\textbullet}}
+}
+% Page layout (geometry)
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{0.7874in}
+\setlength\oddsidemargin{0.7874in}
+\setlength\textheight{9.4251995in}
+\setlength\textwidth{6.9251995in}
+\setlength\footskip{0.0cm}
+\setlength\headheight{0cm}
+\setlength\headsep{0cm}
+% Footnote rule
+\setlength{\skip\footins}{0.0469in}
+\renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
+% Pages styles
+\makeatletter
+\newcommand\ps@Standard{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{}
+  \renewcommand\thepage{\arabic{page}}
+}
+\makeatother
+\pagestyle{Standard}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\title{}
+\author{}
+\date{2017-02-07}
+\begin{document}
+{\selectlanguage{english}\sffamily
+Anar Alaskar-Zada
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3\textsuperscript{rd} February 2017
+}
+
+{\selectlanguage{english}\sffamily
+Dr. Laurence Tratt}
+
+{\selectlanguage{english}\sffamily
+7CCSMGPR -- Group Project}
+
+{\selectlanguage{english}\sffamily
+Group ``No Brainers'' }
+
+{\selectlanguage{english}\sffamily
+Group Members: Alaskar-Zada Anar, Naumov Valentin, Bayat Masih, Stampelos Stamatios}
+
+\subsection[Project Description ]{\selectlanguage{english}\rmfamily\bfseries\color[rgb]{0.30980393,0.5058824,0.7411765}
+Project Description }
+\subsubsection[Aims and Strategy]{\selectlanguage{english}\rmfamily\bfseries\color[rgb]{0.30980393,0.5058824,0.7411765}
+Aims and Strategy}
+{\selectlanguage{english}\sffamily
+The aim of this project is to develop a distributed chat system from scratch, in the given time-frame. Our group aims to
+develop a sophisticated chat system, which will be simple, yet efficient, and will have most, if not all features of
+the modern chat systems. \ We aim to create a system which will connect PC and Android users. For demonstration, we
+will develop a desktop program for PCs and a mobile app for Android Phones.}
+
+{\selectlanguage{english}\sffamily
+In order to achieve our goals, we have adopted the following strategy; the work will be divided into several different
+tasks, and at least two members will be assigned to each task. We will use Agile Development Model as it is the most
+suitable in the current development environment (small team, 2 month deadline, small sized task). The following is the
+full list of our goals:\\}
+
+{\sffamily\bfseries
+Level 1 (Mandatory)}
+
+\liststyleRTFNumii
+\begin{itemize}
+\item {\sffamily
+Basic communications between server and client, message parsing and connections}
+\end{itemize}
+\liststyleRTFNumiv
+\begin{itemize}
+\item {\sffamily
+Develop a distributed chat system where two or more users can interact with each other}
+\item {\sffamily
+The client should be able to speak to everyone on the server}
+\item {\sffamily
+The client should be able to interact with another user privately}
+\end{itemize}
+\liststyleRTFNumii
+\begin{itemize}
+\item {\sffamily
+Security measures: Login system on client side, database with usernames and hashed/salted passwords on server side}
+\end{itemize}
+\liststyleRTFNumiv
+\begin{itemize}
+\item {\sffamily
+The user should be able to register and log in into their account}
+\item {\sffamily
+The user should be able to change his/her password. }
+\item {\sffamily
+The system should be able to hash and store the password in a database. }
+\end{itemize}
+\liststyleRTFNumii
+\begin{itemize}
+\item {\sffamily
+Archive: chat archiving on client/server side}
+\end{itemize}
+\liststyleRTFNumiv
+\begin{itemize}
+\item {\sffamily
+The user should be able to archive his chat. }
+\end{itemize}
+\liststyleRTFNumii
+\begin{itemize}
+\item {\sffamily
+Android App Development}
+\end{itemize}
+\liststyleRTFNumiv
+\begin{itemize}
+\item {\sffamily
+The user should be able to access the system through his/her android device}
+\end{itemize}
+{\sffamily\bfseries
+Level 2 (Optional)}
+
+\liststyleRTFNumv
+\begin{itemize}
+\item {\sffamily
+File Transfer capabilities; drag and drop file transfer between clients}
+\end{itemize}
+\liststyleRTFNumiv
+\begin{itemize}
+\item {\sffamily
+The system should allow the user to transfer files using a drag and drop system}
+\end{itemize}
+\liststyleRTFNumv
+\begin{itemize}
+\item {\sffamily
+Voice messaging between clients}
+\end{itemize}
+\liststyleRTFNumiv
+\begin{itemize}
+\item {\sffamily
+The system should allow the user to record a 10 second video to other users}
+\end{itemize}
+\liststyleRTFNumv
+\begin{itemize}
+\item {\sffamily
+Picture/Video messaging between clients}
+\end{itemize}
+\liststyleRTFNumiv
+\begin{itemize}
+\item {\sffamily
+The system should allow the user to record a 10 second voice message to send between users}
+\end{itemize}
+\clearpage
+\subsubsection[Timetable ]{\selectlanguage{english}\rmfamily\bfseries\color[rgb]{0.30980393,0.5058824,0.7411765 }
+Timetable }
+\begin{center}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{3.5358598in}|m{1.2962599in}|m{1.8483598in}|}
+\hline
+\centering{\selectlanguage{english}\sffamily Task} &
+\centering{\selectlanguage{english}\sffamily Timeframe} &
+\centering\arraybslash{\selectlanguage{english}\sffamily Members}\\\hline
+{\selectlanguage{english}\sffamily Official UML Design Documentation} &
+{\selectlanguage{english}\sffamily 30\textsuperscript{th} Jan -- 18\textsuperscript{th} Feb} &
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada Naumov Valentin }
+
+{\selectlanguage{english}\sffamily Bayat Masih }
+
+{\selectlanguage{english}\sffamily Stampelos Stamatios}\\\hline
+{\selectlanguage{english}\sffamily Basic Chat GUI and Networking} &
+{\selectlanguage{english}\sffamily 30\textsuperscript{th} Jan -- 18\textsuperscript{th} Feb} &
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada Naumov Valentin }\\\hline
+{\selectlanguage{english}\sffamily FTP Implementation} &
+{\selectlanguage{english}\sffamily 13\textsuperscript{th} Feb -- 25\textsuperscript{th} Feb} &
+{\selectlanguage{english}\sffamily Bayat Masih }
+
+{\selectlanguage{english}\sffamily Stampelos Stamatios}\\\hline
+{\selectlanguage{english}\sffamily Security Login and Hashing} &
+{\selectlanguage{english}\sffamily 18\textsuperscript{th} Feb -- 25\textsuperscript{th} Feb} &
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada}
+
+{\selectlanguage{english}\sffamily Stampelos Stamatios}\\\hline
+{\selectlanguage{english}\sffamily Android App Development} &
+{\selectlanguage{english}\sffamily 25\textsuperscript{th} Feb -- 18\textsuperscript{th} Mar} &
+{\selectlanguage{english}\sffamily Bayat Masih }
+
+{\selectlanguage{english}\sffamily Stampelos Stamatios}\\\hline
+{\selectlanguage{english}\sffamily Picture/Video Messaging} &
+{\selectlanguage{english}\sffamily 25\textsuperscript{th} Feb -- 18\textsuperscript{th} Mar} &
+{\selectlanguage{english}\sffamily Bayat Masih }\\\hline
+{\selectlanguage{english}\sffamily Database MySQL} &
+{\selectlanguage{english}\sffamily 25\textsuperscript{th} Feb -- 11\textsuperscript{th} Mar} &
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada Naumov Valentin }\\\hline
+{\selectlanguage{english}\sffamily Voice Messaging} &
+{\selectlanguage{english}\sffamily 25\textsuperscript{th} Feb -- 11\textsuperscript{th} Mar} &
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada}
+
+{\selectlanguage{english}\sffamily Stampelos Stamatios}\\\hline
+{\selectlanguage{english}\sffamily Chat Archiving} &
+{\selectlanguage{english}\sffamily 25\textsuperscript{th} Feb -- 11\textsuperscript{th} Mar} &
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada Stampelos Stamatios}\\\hline
+{\selectlanguage{english}\sffamily Polishing, Debugging, Testing, Documentation } &
+{\selectlanguage{english}\sffamily 11\textsuperscript{th} Mar -- 22\textsuperscript{nd} Mar} &
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada Naumov Valentin }
+
+{\selectlanguage{english}\sffamily Bayat Masih }
+
+{\selectlanguage{english}\sffamily Stampelos Stamatios}\\\hline
+\end{supertabular}
+\end{center}
+\subsubsection[Initial Progress]{\selectlanguage{english}\rmfamily\bfseries\color[rgb]{0.30980393,0.5058824,0.7411765}
+Initial Progress}
+{\selectlanguage{english}\sffamily
+We have started the project by researching the required technologies and prototyping with them. We are currently working
+on all mandatory goals and some secondary goals as well. At the moment, all the team members are working on their
+allocated tasks, and are writing separate, small programs for testing and experimentation. Once everyone is confident
+with their code, we will combine it into one program at the end of the first deadline, fix the bugs, and update the
+documentation and move on to the next task. }
+
+
+\clearpage
+
+\subsection[Project Organization ]{\selectlanguage{english}\rmfamily Project Organization }
+\subsubsection[Team and Roles ]{\selectlanguage{english}\rmfamily\bfseries\color[rgb]{0.30980393,0.5058824,0.7411765}
+Team and Roles }
+\begin{center}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{1.5462599in}|m{5.22336in}|}
+\hline
+\centering{\selectlanguage{english}\sffamily Team Member} &
+\centering\arraybslash{\selectlanguage{english}\sffamily Role}\\\hline
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada} &
+{\selectlanguage{english}\sffamily Coordinator/Programmer/Documentation}\\\hline
+{\selectlanguage{english}\sffamily Naumov Valentin} &
+{\selectlanguage{english}\sffamily Programmer/Documentation}\\\hline
+{\selectlanguage{english}\sffamily Bayat Masih } &
+{\selectlanguage{english}\sffamily Programmer/Documentation}\\\hline
+{\selectlanguage{english}\sffamily Stampelos Stamatios} &
+{\selectlanguage{english}\sffamily Programmer/Documentation}\\\hline
+\centering{\selectlanguage{english}\sffamily Team Member} &
+\centering\arraybslash{\selectlanguage{english}\sffamily Programming Task}\\\hline
+{\selectlanguage{english}\sffamily Anar Alaskar-Zada} &
+{\selectlanguage{english}\sffamily Basic Chat GUI and Networking, Database MySQL, Security Login and Hashing, Voice
+Messaging, Chat Archiving }\\\hline
+{\selectlanguage{english}\sffamily Naumov Valentin} &
+{\selectlanguage{english}\sffamily Basic Chat GUI and Networking, Database MySQL}\\\hline
+{\selectlanguage{english}\sffamily Bayat Masih } &
+{\selectlanguage{english}\sffamily File Transfer Protocol Implementation, Android App Development, Picture/Video
+Messaging}\\\hline
+{\selectlanguage{english}\sffamily Stampelos Stamatios} &
+{\selectlanguage{english}\sffamily Security Login and Hashing, File Transfer Protocol Implementation, Android App
+Development, Chat Archiving, Voice Messaging}\\\hline
+\end{supertabular}
+\end{center}
+\subsubsection[Processes and
+Tools]{\selectlanguage{english}\rmfamily\bfseries\color[rgb]{0.30980393,0.5058824,0.7411765} Processes and Tools}
+{\selectlanguage{english}\sffamily
+In order to achieve our goals and create an efficient system we have to be an effective team. To be an effective team,
+we are going to use several tools and techniques to improve communications between the team members:}
+
+\liststyleRTFNumvi
+\begin{itemize}
+\item {\selectlanguage{english}\sffamily
+Weekly meeting are going to be arranged, so that the team members will be able to discuss current progress, problems,
+concerns and etc.}
+\item {\selectlanguage{english}\sffamily
+Programming sessions are going to be arranged, so that the team members will be able to share their code, and help other
+team members with their tasks. Members of this team have a wide range of knowledge, coming from different background:
+Artificial Intelligence, Networking, Games Tech, Software Development, Cyber Security and etc. }
+\item {\selectlanguage{english}\sffamily
+Each task will be assigned to at least two people, to improve coding efficiency and to reduce the chance of a task being
+failed or skipped. }
+\item {\selectlanguage{english}\sffamily
+We will use GitHub to share code between each other, to ask for feedback and check each other's code for compatibility}
+\item {\selectlanguage{english}\sffamily
+Asana will be used for project management and tracking milestones and deadlines}
+\item {\selectlanguage{english}\sffamily
+We will use LaTeX, email and messaging apps to stay in touch, work on documents and send each other updates on our
+progress}
+\end{itemize}
+\subsubsection[Development Tools ]{\selectlanguage{english}\rmfamily\bfseries\color[rgb]{0.30980393,0.5058824,0.7411765}
+Development Tools }
+{\selectlanguage{english}\sffamily
+The following tools and languages will be used during the development of the chat application:}
+
+\liststyleRTFNumiii
+\begin{itemize}
+\item {\selectlanguage{english}\sffamily
+Java programming language (with JDK and JRE)}
+\item {\selectlanguage{english}\sffamily
+Android Studio for app development }
+\item {\selectlanguage{english}\sffamily
+XML for Android app GUI}
+\item {\selectlanguage{english}\sffamily
+Netbeans and Eclipse for programming tasks}
+\item {\selectlanguage{english}\sffamily
+Java Remote Method Invocation for server networking}
+\item {\selectlanguage{english}\sffamily
+FTP Protocols}
+\item {\selectlanguage{english}\sffamily
+MySQL for server database management }
+\item {\selectlanguage{english}\sffamily
+Visual Paradigm v11 for UML diagrams\newline
+}
+\end{itemize}
+\subsubsection[Peer Assessment and Conflicts
+]{\selectlanguage{english}\rmfamily\bfseries\color[rgb]{0.30980393,0.5058824,0.7411765} Peer Assessment and Conflicts }
+{\selectlanguage{english}\sffamily
+Following the discussion we had during our first meeting, we have decided that it would be fair to award each other an
+equal amount of marks (25 point per person) as long as all the tasks are completed, and everyone has contributed the
+same amount of work. We have agreed to help each other on our allocated tasks during the programming sessions which we
+will organize. It is important to share our programming experience and expertise because we have two members less than
+a standard group of six members. This means that there will be more work for each of us, and we need to collaborate and
+work together to complete our goals on time. }
+
+{\selectlanguage{english}\sffamily
+In the unlikely case of a conflict arising in the team, we have agreed to use voting to resolve the issue. Therefore, in
+such case we will do what the majority wants to do. The team has four members, and if the votes are equal (2-2), we
+will try to compromise or seek the module leader's advice. }
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+\end{document}
+
